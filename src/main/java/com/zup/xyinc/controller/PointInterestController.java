@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/points")
+@RequestMapping("/point")
 public class PointInterestController {
 
     @Autowired
