@@ -24,11 +24,11 @@ public class PointInterestService {
         return pointInterestRepository.save(pointInterest);
     }
 
-    List<PointInterest> getAllPointsInterest() {
+    public List<PointInterest> getAllPointsInterest() {
         return pointInterestRepository.findAll();
     }
 
-    List<PointInterest> getPointsByProximity(Long coordinateX, Long coordinateY, Long maxDistance) {
+    public List<PointInterest> getPointsByProximity(Long coordinateX, Long coordinateY, Long maxDistance) {
         return pointInterestRepository.findAllByCoordinate(coordinateX, coordinateY, maxDistance.doubleValue());
     }
 }

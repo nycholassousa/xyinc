@@ -33,7 +33,7 @@ class PointInterestServiceTest {
     private PointInterestService pointInterestService;
 
     @Test
-    void returnAllpointInterests() {
+    void returnAllPointsInterest() {
         PointInterest pointInterest = PointInterest.builder().name("Lanchonete").coordinateX(27L).coordinateY(12L).build();
         PointInterest pointInterest1 = PointInterest.builder().name("Posto").coordinateX(31L).coordinateY(18L).build();
 
@@ -46,7 +46,7 @@ class PointInterestServiceTest {
     }
 
     @Test
-    void returnAllpointInterestsMatchCoordinates() {
+    void returnAllPointsInterestMatchCoordinates() {
         PointInterest pointInterest = PointInterest.builder().name("Lanchonete").coordinateX(27L).coordinateY(12L).build();
         PointInterest pointInterest1 = PointInterest.builder().name("Posto").coordinateX(31L).coordinateY(18L).build();
 
