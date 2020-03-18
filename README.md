@@ -18,6 +18,10 @@ Execute o seguinte comando:
 
 Caso queira, a atividade possui o swagger, para acessar, basta ir na url: http://localhost:8080/swagger-ui.html
 
+### Sobre o Banco de Dados
+
+O banco de dados foi feito utilizando h2.
+
 ## Endpoints Disponíveis
 
 Segue abaixo a tabela dos endpoints disponíveis na API
@@ -56,3 +60,4 @@ No quadro abaixo estão os tipos referentes ao PathVariable para busca de pontos
  - [Maven 3](https://maven.apache.org/download.cgi)
  - [Mockito](https://site.mockito.org/)
  - [Junit 5](https://junit.org/junit5/)
+ - [H2 Database](https://www.h2database.com/html/main.html)
