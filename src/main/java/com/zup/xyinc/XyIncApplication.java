@@ -1,4 +1,4 @@
-package com.zup.xyinc.xyinc;
+package com.zup.xyinc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.zup.xyinc.xyinc;
+package com.zup.xyinc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
