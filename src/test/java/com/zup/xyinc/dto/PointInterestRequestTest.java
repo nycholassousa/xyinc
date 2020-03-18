@@ -16,43 +16,43 @@ class PointInterestRequestTest {
     private Validator validator;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         validator = factory.getValidator();
     }
 
     @Test
-    public void testNegativeCoordinate() {
-        PointInterestRequest placeRequest = PointInterestRequest.builder().name("Casa").coordinateX(-1L).coordinateY(-1L).build();
+    void testNegativeCoordinate() {
+        PointInterestRequest pointInterestRequest = PointInterestRequest.builder().name("Casa").coordinateX(-1L).coordinateY(-1L).build();
 
-        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(placeRequest);
+        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(pointInterestRequest);
         assertThat(violations).isNotEmpty();
         assertThat(violations).hasSize(2);
     }
 
     @Test
-    public void testEmptyName() {
-        PointInterestRequest placeRequest = PointInterestRequest.builder().name("").coordinateX(0L).coordinateY(0L).build();
+    void testEmptyName() {
+        PointInterestRequest pointInterestRequest = PointInterestRequest.builder().name("").coordinateX(0L).coordinateY(0L).build();
 
-        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(placeRequest);
+        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(pointInterestRequest);
         assertThat(violations).isNotEmpty();
         assertThat(violations).hasSize(1);
     }
 
     @Test
-    public void testNullCoordinates() {
-        PointInterestRequest placeRequest = PointInterestRequest.builder().name("Casa").build();
+    void testNullCoordinates() {
+        PointInterestRequest pointInterestRequest = PointInterestRequest.builder().name("Casa").build();
 
-        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(placeRequest);
+        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(pointInterestRequest);
         assertThat(violations).isNotEmpty();
         assertThat(violations).hasSize(2);
     }
 
     @Test
-    public void testCorrectRequest() {
-        PointInterestRequest placeRequest = PointInterestRequest.builder().name("Casa").coordinateX(0L).coordinateY(0L).build();
+    void testCorrectRequest() {
+        PointInterestRequest pointInterestRequest = PointInterestRequest.builder().name("Casa").coordinateX(0L).coordinateY(0L).build();
 
-        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(placeRequest);
+        Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(pointInterestRequest);
         assertThat(violations).isEmpty();
     }
 }
