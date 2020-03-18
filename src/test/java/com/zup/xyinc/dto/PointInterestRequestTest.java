@@ -22,7 +22,7 @@ class PointInterestRequestTest {
     }
 
     @Test
-    public void testNegativeCoordenate() {
+    public void testNegativeCoordinate() {
         PointInterestRequest placeRequest = PointInterestRequest.builder().name("Casa").coordinateX(-1L).coordinateY(-1L).build();
 
         Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(placeRequest);
@@ -40,7 +40,7 @@ class PointInterestRequestTest {
     }
 
     @Test
-    public void testNullCoordenates() {
+    public void testNullCoordinates() {
         PointInterestRequest placeRequest = PointInterestRequest.builder().name("Casa").build();
 
         Set<ConstraintViolation<PointInterestRequest>> violations = validator.validate(placeRequest);
