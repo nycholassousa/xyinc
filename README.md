@@ -13,6 +13,10 @@ Execute o seguinte comando:
 Execute o seguinte comando:
 
 	mvn spring-boot:run
+	
+### Utilizando Swagger
+
+Caso queira, a atividade possui o swagger, para acessar, basta ir na url: http://localhost:8080/swagger-ui.html
 
 ## Endpoints Disponíveis
 
